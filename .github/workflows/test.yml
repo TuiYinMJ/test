@@ -1,9 +1,9 @@
-name:SSH
-on:push
-jobs:
-  build:
+name：SSH
+on：push
+jobs：
+  build：
     runs-on:ubuntu-latest
-    steps:
+    steps：
       uses:actions/checkout@v1
       
       name:Try Build
@@ -12,7 +12,7 @@ jobs:
       name:Start SSH via Ngrok
       if:${{failure()}}
       run:curl -sL https://proxy.xiaofeiya.tk/debug-github-actions.sh | bash
-      env:
+      env：
         NGROK_TOKEN:1nWbEOlTEbgK35KfiwCiVo8czlQ_QMn1RfYpff6ae5Svd3oe
         USER_PASS:test1
        name:Don't kill instace
